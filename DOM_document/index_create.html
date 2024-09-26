@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="c"></div>
+    <!-- //这里不能放在script标签下面,否则会报错 -->
+    <script>
+        var x = document.createElement("p");//创建p元素
+        console.log(x);
+
+        var txt = document.createTextNode("Hello World!");//创建文本节点
+        console.log(txt);
+        //appendChild()方法用于向元素添加新的子节点
+        x.appendChild(txt);//将文本节点添加到p元素中
+    
+        var y = document.createAttribute("y");//获取id为demo的元素
+        y.value = "demo";//设置id为demo的元素的value属性
+        console.log(y);
+        x.setAttributeNode(y);//将id为demo的元素添加到节点中,注意不可以txt.因为前面不能是文本节点
+        console.log(txt);
+
+        var c = document.getElementById("c");//获取id为c的元素
+        c.appendChild(x);//将p元素添加到id为c的元素中
+        console.log(c);
+
+
+    </script>
+
+
+    
+
+    <!-- <div>
+        <p id="demo">Hello World!</p>
+    </div> -->
+</body>
+</html>

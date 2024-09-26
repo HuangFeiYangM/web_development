@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 下面这行代码是为了适应不同设备的屏幕大小 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Document</title>
+    <style>
+        .box{
+            /* background-color: rgb(42, 148, 13); */
+            width: 300px;
+            height: 200px;
+
+        }
+        .p1{
+            background-color: #00a1d6;
+        }
+        .p2{
+            background-color: blueviolet;
+        }
+        /* 媒体查询语法: @media */
+        @media screen and (max-width: 768px){
+            /* 当屏幕宽度小于或等于768px时，下面样式生效 */
+            .box{
+                background-color: #c01a80;
+            }
+            .p1{
+                display: none;
+                /* 隐藏元素 */
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px){
+            /* 当屏幕宽度大于768px小于或等于1024px时，下面样式生效 */
+            .box{
+                background-color: #00a1d6;
+            }
+            .p2{
+                /* display: block; 将使用该类的元素的显示行为设置为块级元素。块级元素会在页面中独占一行，并且可以设置宽度和高度。 */
+                display: block;
+            }
+        }
+        @media screen and (min-width: 1025px){
+            /* 当屏幕宽度大于或等于1024px时，下面样式生效 */
+            .box{
+                background-color: #d51616;
+            }
+        }
+            
+        
+
+    </style>
+</head>
+<!-- 为了适应不同设备的屏幕大小，我们需要使用媒体查询。媒体查询将通过CSS来设置不同的样式，以便在不同的设备上显示不同的内容。 -->
+<body>
+    <div class="box">
+        <p>This is a box with a blue background color.</p>
+    </div>
+    <p class="p1">手机看不到我</p>
+    <p class="p2">嗨嗨嗨</p>
+
+    
+</body>
+</html>

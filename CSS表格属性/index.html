@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        /* 注意不同的属性对应不同的标签 */
+        .table_1{
+            
+            /* 定义表格折叠 */
+            border-collapse:collapse;
+            /* 定义宽度和高度 */
+            /* 如果设置太小则自动设定 */
+            width: 500px;
+            height: 400px;
+            
+            
+            
+
+        }
+        .table_2{
+            border-collapse:collapse;
+            width: 500px;
+            height: 400px;
+            text-align:center;
+
+        }
+        td,tr{
+            /* 设置字体对齐,默认为左中对齐 */
+            text-align: center;
+            vertical-align: bottom;
+            /* 在外面围上一圈 */
+            border: 3px solid rgb(237, 8, 8);
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <!-- 不用CSS -->
+    <table border="1">
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+    </table>
+
+
+
+
+    <table class="table_1">
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+    </table>
+
+
+
+
+    <table class="table_2">
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+        <tr>
+            <td>单元格01</td>
+            <td>单元格02</td>
+            <td>单元格03</td>
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+
+</html>

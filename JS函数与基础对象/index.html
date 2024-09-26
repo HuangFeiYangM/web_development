@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHello() {
+            console.log("Hello World!");
+            document.write("Hello World!");
+        }
+        function outputnum(num) {
+            return num * 2;
+        }
+        sayHello();
+        var x = outputnum(5);
+        console.log(x);
+        document.write("<br>");
+        document.write(x);
+
+
+
+        var user = {
+            name: "John",
+            age: 30,
+            city: "New York",
+            greet: function(){
+                console.log("Hello " + this.name + ", you are " + this.age + " years old and live in " + this.city + ".");
+                document.write("Hello " + this.name + ", you are " + this.age + " years old and live in " + this.city + ".");
+            },
+            container:{//甚至可以嵌套对象
+                name: "box",
+                color: "red",
+            }
+        };
+        
+        document.write("<br>");
+        document.write("Name: " + user.name);
+        document.write("<br>");
+        user.greet();
+        document.write("<br>");
+        document.write("Color of the box: " + user.container.color);//可以直接访问嵌套对象属性
+    </script>
+    
+</body>
+</html>

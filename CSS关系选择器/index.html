@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1_0{
+            color: #2ae43f;
+
+        }
+
+        /* 1.后代 */
+        ul li{
+            color: red;
+        }
+        
+        
+
+
+
+        /* 2.子代 */
+        /* 可以关系选择器可以同时成立 */
+        ul>li{
+            color: #29e320;
+        }
+        /* 3.相邻兄弟 */
+        /* 条件满足后只有相邻的会改变 */
+        li+p{
+            color: #0ee4ef
+        }
+        
+        /* 4.通用兄弟 */
+        p~li{
+            color: #cf10b5
+        }
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <h1 class="h1_0">关系系选择器</h1>
+
+    <!-- /* 1.后代 */ -->
+    <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <div>
+            <ol>
+                <!-- 只要是后代不管多深都会生效 -->
+                <li>001</li>
+                <li>002</li>
+            </ol>
+        </div>
+    </ul>
+
+    <div>
+        <!-- /* 条件满足后只有相邻的会改变 */ -->
+        <p>xd_01</p>
+        <li></li>
+        <p>条件满足后只有相邻的会改变</p>
+
+        <p>xd_02</p>
+        <p>xd_03</p>
+    </div>
+
+    
+    <p>通用兄弟</p>
+    <li>11</li>
+    <li>11</li><li>11</li><li>11</li>
+
+
+
+
+
+
+
+</body>
+
+</html>

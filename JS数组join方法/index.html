@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        var a = [1, 2, 3, 4, 5];
+        var b = "hello";
+        var str = a.join();//默认用逗号分隔
+        document.write(str);
+        str = a.join(" ");//用空格分隔
+        document.write("<br>");
+        document.write(str);
+        str = a.join(";");//用分号分隔
+        document.write("<br>");
+        document.write(str);
+        str = a.join(b);//用hello分隔
+        document.write("<br>");
+        document.write(str);
+        
+    </script>
+</body>
+</html>

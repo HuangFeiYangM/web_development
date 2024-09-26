@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* animation: 和 hover 冲突，不能同时使用 */
+
+            animation: myanimation 2s linear 0s infinite alternate;
+            
+            /*  animation的属性：name duration timing-function delay iteration-count direction fill-mode play-state; */
+            /*  name: 动画名称，可以自定义，但不能重复 */
+            /*  duration: 动画持续时间，单位是秒 */
+            /*  timing-function: 动画速度曲线，linear、ease、ease-in、ease-out、ease-in-out */
+            /*  delay: 动画延迟时间，单位是秒 */
+            /*  iteration-count: 动画重复次数，infinite表示无限循环 */
+            /*  direction: 动画播放方向，normal、reverse、alternate */
+            /*  fill-mode: 动画结束后状态，none、forwards、backwards、both */
+            /*  play-state: 动画播放状态，running、paused */
+            /*  注意：animation属性和hover属性不能同时使用 */
+            /*  动画名称可以自定义，但不能重复 */
+        }
+        @keyframes myanimation {
+            0% {
+                /* 动画开始时的样式 */
+                /* 可以设置高度、宽度、背景颜色等 */
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                box-shadow: 0 0 10px #fff;   /* 阴影效果 */
+                border-radius: 10px;   /* 圆角效果 */
+                margin:100px;
+                opacity: 0.5;   /* 透明度 */
+            }
+            50% {
+                width: 100px;
+                height: 100px;
+
+                background-color: yellow;
+                opacity: 0.8;
+            }
+            100% {
+                width: 200px;
+                opacity: 1;
+                height: 200px;
+                background-color: rgb(92, 202, 33);
+            }
+        }
+        /* hover 效果 */
+        /* 不要忘记“.”要加上 */
+        /* .box:hover {
+            background-color: blue;
+        }    */
+        .box:hover {
+            animation-play-state: paused;
+            /* animation-play-state: paused;  /* 鼠标悬停后暂停动画 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    
+</body>
+</html>

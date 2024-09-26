@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            padding: 10px;
+            /* //内边距 */
+            border: 5px solid black;
+            /* //边框 */
+            margin: 10px;
+            /* //外边距 */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        var box = document.getElementsByClassName("box");//获取元素
+        console.log(box.clientHeight);//获取元素高度
+        console.log(box.clientWidth);//获取元素宽度
+        console.log(box.offsetTop);//获取元素距离页面顶部的距离
+        console.log(box.offsetLeft);//获取元素距离页面左侧的距离
+        console.log(box.offsetHeight);//获取元素高度+内边距+边框
+        console.log(box.offsetWidth);//获取元素宽度+内边距+边框;
+    </script>
+    
+
+    
+</body>
+</html>
