@@ -9,6 +9,28 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class = "box" id = "box1">
+
+    </div>
+
+    <script>
+        var box1 = document.getElementById("box1");//获取元素
+
+
+        //第一种方式设置属性,属性值用字符串拼接,可以设置style,class等属性
+        // 后面的字符串可以合为一个整体,也可以分开写("+")
+        // box1.setAttribute("style", "border: 10px solid black;" + "background-color: blue;" + "width: 100px;" + "height: 100px;");//设置属性
+
+
+
+        // //第二种方式设置属性,属性值用变量,可以设置style,class等属性
+        // box1.style.backgroundColor = "red";//设置背景颜色
+        // box1.style.width = "200px";//设置宽度
+        // box1.style.height = "200px";//设置高度
+
+        //第三种方式:使用cssText属性设置多个属性值(最常用)
+        box1.style.cssText = "border: 10px solid black;" + "background-color: blue;" + "width: 100px;" + "height: 100px;";//设置属性值
+
+    </script>
 </body>
 </html>
