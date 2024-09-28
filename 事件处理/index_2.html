@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom0事件</title>
+</head>
+<body>
+    <!-- 使用DOM0级事件的优点:可以与JavaScript分开写 缺点:只能绑定一个事件处理函数,不能绑定多个事件处理函数 -->
+    <button id="myBt"> 点击我 </button>
+    <script>
+        // 获取按钮元素
+        var myBt = document.getElementById("myBt");
+        myBt.onclick = function() {
+            alert("按钮被点击了！");
+        }
+        // 后面的函数会覆盖前面的函数
+        myBt.onclick = function() {
+            alert("按钮被双击了！");
+        }
+    </script>
+</body>
+</html>

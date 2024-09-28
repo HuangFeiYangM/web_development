@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom2事件处理</title>
+</head>
+<body>
+    <!-- 优点:可以绑定多个事件处理函数 -->
+    <button id="myBt"> 点击我 </button>
+    <script>
+        var myBt = document.getElementById("myBt");
+        myBt.addEventListener("click", function(){
+            console.log("你好，世界！");
+        });
+        myBt.addEventListener("click", function(){
+            console.log("你好，世界！");
+        });
+    </script>
+</body>
+</html>
