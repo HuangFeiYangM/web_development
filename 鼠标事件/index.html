@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="Bt1"> 单击 </button>
+    <button id="Bt2"> 双击 </button>
+    <button id="Bt3"> 点击我 </button>
+    <button id="Bt4"> 松开我 </button>
+    <button id ="Bt5"> 移动我 </button>
+
+    <script>
+        var Bt1 = document.getElementById("Bt1");
+        var Bt2 = document.getElementById("Bt2");
+        var Bt3 = document.getElementById("Bt3");
+        var Bt4 = document.getElementById("Bt4");
+        var Bt5 = document.getElementById("Bt5");
+        
+        Bt1.onclick = function() {
+            alert("单击了Bt1");
+        }
+        Bt2.ondblclick = function() {
+            alert("双击了Bt2");
+        }
+        Bt3.onmousedown = function() {
+            alert("按下Bt3");
+        }
+        Bt4.onmouseup = function() {
+            alert("松开Bt4");
+        }
+        Bt5.onmousemove= function() {
+            alert("鼠标移动Bt5");//鼠标移动事件,移动到元素上会触发
+        }
+    </script>
+</body>
+</html>
