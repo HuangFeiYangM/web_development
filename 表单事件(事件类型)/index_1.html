@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>表单事件</h1>
+    <!-- onsubmit可以设置提交表单的默认行为，如阻止默认行为，可以用return false -->
+    <!-- onsubmit设置可以指定一个函数，当用户提交表单时，该函数会被调用 -->
+    <form id = "form1" onsubmit="f">
+        <input type="text" id="input1">
+        <button onclick="resetForm()">重置</button>
+        <br>
+        <button id="btn1" onclick="submitForm()">提交</button>
+    </form>
+    
+
+
+
+    <script>
+        var form1 = document.getElementById("form1");
+        var input1 = document.getElementById("input1");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        //oninput:input事件
+        //oninput事件，当输入框内容发生变化时触发
+        input1.oninput = function(e){
+            console.log(e.value);//获取当前输入框的值
+            console.log(e.target.value);//获取当前输入框的值
+            //e.value和e.target.value是等价的
+        }
+        
+        //onselect:select事件
+        //onselect事件，当用户选择文本时触发,如鼠标拖动选择文本
+        input1.onselect = function(e){
+            console.log("选择的文本：" + e.target.value);//获取当前选择的文本
+        }
+
+        //onchange:change事件
+        //onchange事件，当输入框内容发生变化时触发或者失去焦点时触发
+        input1.onchange = function(e){
+            console.log("输入框内容变化："  + e.target.value);//获取当前输入框的值
+        }
+
+        //reset:reset事件
+        //reset事件，当用户点击重置按钮时触发
+        function resetForm(){
+            form1.reset();
+        }
+
+
+        //onsubmit:submit事件
+        //onsubmit事件，当用户提交表单时触发
+        function submitForm(){
+            form1.submit();
+        }
+
+        
+
+
+
+//=====================================分割线========================================================================================================
+        
+        // //onfocus:focus事件
+        // //onfocus事件，当输入框获得焦点时触发
+        // input1.onfocus = function(e){
+        //     console.log(e.target.value);//获取当前输入框的值
+        // }
+
+        // //onblur:blur事件
+        // //onblur事件，当输入框失去焦点时触发
+        // input1.onblur = function(e){
+        //     console.log(e.target.value);//获取当前输入框的值
+        // }
+
+        // //onkeydown:keydown事件
+        // //onkeydown事件，当用户按下按键时触发
+        // input1.onkeydown = function(e){
+        //     console.log(e.keyCode);//获取按键的keyCode值
+        // }
+
+        // //onkeyup:keyup事件
+        // //onkeyup事件，当用户松开按键时触发
+        // input1.onkeyup = function(e){
+        //     console.log(e.keyCode);//获取按键的keyCode值
+        // }
+
+        // //onmousedown:mousedown事件
+        // //onmousedown事件，当用户按下鼠标按键时触发
+        // input1.onmousedown = function(e){
+        //     console.log(e.target.value);//获取当前输入框的值
+        // }
+
+        // //onmouseup:mouseup事件
+        // //onmouseup事件，当用户松开鼠标按键时触发
+        // input1.onmouseup = function(e){
+        //     console.log(e.target.value);//获取当前输入框的值
+        // }
+
+        // //onmousemove:mousemove事件
+        // //onmousemove事件，当鼠标移动时触发
+        // input1.onmousemove = function(e){
+        //     console.log(e.target.value);//获取当前输入框的值
+        // }
+
+        // //onmouseover:mouseover事件
+        // //onmouseover事件，当鼠标移到元素上时触发
+        // input1.onmouseover = function(e){
+        //     console.log(e.target.value);//获取当前输入框的值
+        // }
+
+        // //onmouseout:mouseout事件
+        // //onmouseout事件，当鼠标移出元素时触发
+        // input1.onmouseout = function(e){
+        //     console.log(e.target.value);//获取当前输入框的值
+        // }
+
+        // //onsubmit:submit事件
+        // //onsubmit事件，当用户提交表单时触发
+        // var btn1 = document.getElementById("btn1");
+        // btn1.onclick = function(e){
+        //     e.preventDefault();
+        //     console.log(input1.value);//获取当前输入框的值
+        //     //阻止默认行为，防止表单提交
+        //     //return false;
+        // }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 输入框 -->
+    <input type="text" id="input" value="请输入内容">
+    <script>
+        var input = document.getElementById('input');
+        input.onkeydown = function(event) {
+            // console.log(event.target.value); // 输入框内容
+            console.log("按下了按键onkeydown"); 
+            // console.log(event.keyCode); // 按键码
+            // console.log(event.key); // 按键值
+            // console.log(event.code); // 按键码
+            // console.log(event.which); // 按键码
+        }
+        input.onkeyup = function(event) {
+            console.log("松开了按键onkeyup"); 
+            // console.log(event.target.value); // 输入框内容
+        }
+        //ctrl, shift, alt, meta 键不会触发onkeypress事件
+        input.onkeypress = function(event) {
+            console.log("触发了onkeypress"); 
+            console.log(" 输入框内容" + event.target.value); // 输入框内容
+            console.log(" 按键码:" + event.keyCode); // 按键码
+            console.log(" 按键值:"+event.key); // 按键值
+            console.log(" 按键码:"+event.code); // 按键码
+            console.log(" 按键码:"+event.which); // 按键码
+            if(event.keyCode == 13) { // 回车键
+                console.log("回车键按下");
+            }
+        }
+    </script>
+</body>
+</html>
