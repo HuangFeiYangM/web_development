@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .root {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+        }
+        
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="root" id = "root">
+        <div class="child" id = "child">
+
+        </div>
+    </div>
+    <script>
+        var root = document.getElementById('root');
+        var child = document.getElementById('child');
+
+        //fuction()里可以不写event参数，因为event参数是默认参数，如果不写，则会自动获取当前事件对象
+        root.onclick = function() {
+            console.log('root clicked');
+        }
+        
+        child.onclick = function() {
+            //如果不加stopPropagation就点击child，则会先触发root的点击事件，然后再触发child的点击事件,即两个事件同时触发
+            event.stopPropagation();
+            console.log('child clicked');
+        }
+    </script>
+</body>
+</html>

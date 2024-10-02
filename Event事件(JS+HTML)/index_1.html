@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "b1">点击</button>
+
+    <a id="a1" href="https://www.baidu.com"> 百度 </a>
+
+    <script>
+        // 定义一个函数
+        var bt = document.getElementById("b1");
+        // 给按钮添加点击事件
+        // e或者event参数都是事件对象
+        //fuction()里可以不写event参数，因为event参数是默认参数，如果不写，则会自动获取当前事件对象
+        bt.onclick = function(e){
+            console.log(event);// 打印事件对象
+            console.log(e.target);// 打印事件源对象
+            e.target.style.backgroundColor = "red";// 给事件源对象添加背景色
+            e.target.innerHTML = "按钮已点击";// 改变事件源对象的innerHTML
+            console.log(e.type);// 打印事件类型,click
+
+        }
+        // bt.dublclick = function(e){//======================================================================无效
+        //     console.log(e.type);// 打印事件类型,dblclick
+        // }
+
+
+
+        var a1 = document.getElementById("a1");
+        a1.onclick = function(e){
+            console.log("a1被点击,但是阻止默认行为");// 打印事件类型,click
+            e.preventDefault(); // 阻止默认行为,即默认打开网页
+        }
+    </script>
+</body>
+</html>
