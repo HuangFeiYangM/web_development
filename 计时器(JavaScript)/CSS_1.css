@@ -1,0 +1,14 @@
+/* CSS注意:ID用#开头，class用.开头 */
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    opacity: 0.5;
+}
+
+#box2{
+    width: 100px;
+    height: 100px;  
+    background-color: blue;
+    opacity: 0.5;
+}
