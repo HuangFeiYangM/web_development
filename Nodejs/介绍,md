@@ -1,0 +1,15 @@
+## Nodejs介绍
+Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。
+
+Node.js 是一个事件驱动的非阻塞 I/O 模型，它使 JavaScript 运行在单个线程上，充分利用多核 CPU 的计算能力。
+
+Node.js 的包管理器 npm 是一个全球最大的开源库生态系统，提供了超过 100,000 个可供下载的第三方模块。
+
+Node.js 是一个高性能的服务器端 JavaScript 环境，适用于实时 Web 应用，能处理大量并发请求，非常适合用于构建高性能的 Web 服务。
+
+***Node.js使得服务器端编程变得简单、快速、可靠。(可以使用JavaScript来编写服务器端应用，而不需要像其他语言那样使用繁琐的服务器配置和依赖管理。)
+
+
+## Node.js 安装
+>官网: 
+>https://nodejs.org/en/

@@ -7,32 +7,39 @@
     <link rel="stylesheet" href="CSS_1.css">
 </head>
 <body>
-    <!-- 防抖 -->
-    <!--以滚动监听为例  -->
-    <h3 id="h3">防抖</h3>
-    <h3 id="h3">防抖</h3>
-    <h3 id="h3">防抖</h3>
-    <h3 id="h3">防抖</h3>
-    <h3 id="h3">防抖</h3>
+    <!-- 节流 -->
+    <!--以滚动监听为例-->
+    <h3 id="h3">节流</h3>
+    <h3 id="h3">节流</h3>
+    <h3 id="h3">节流</h3>
+    <h3 id="h3">节流</h3>
+    <h3 id="h3">节流</h3>
 
     <script>
-        // 防抖函数
+        //滚动监听
+        window.onscroll = tht(scrollHandle, 2000);
+
         function scrollHandle() {
-            var top = document.documentElement.scrollTop || document.body.scrollTop;// 获取滚动条距离顶部的距离
-            console.log(top);// 打印滚动条距离顶部的距离,执行频率太高,影0响性能
+            var top = document.documentElement.scrollTop || document.body.scrollTop;
+            console.log(top);
         }
-        // 计时器
-        function time(fn, delay) {
-            var timer = null;
+
+        //节流
+        //fn:要执行的函数，delay:延迟时间
+        function tht(fn, delay) {
+            var valid = true;
             return function() {
-                if (timer) {// 如果定时器存在,说明上一次延时还未执行,清除定时器
-                    clearTimeout(timer);// 清除定时器
+                if (!valid) {
+                    return false ;
                 }
-                timer = setTimeout(fn, delay);//定时器不存在才会执行,设置定时器
+                valid = false;
+                setTimeout(function(){
+                    fn();
+                    valid = true;
+                },delay)
             }
         }
-        window.onscroll = time(scrollHandle, 200);// 监听滚动条,每隔1000ms执行一次scrollHandle函数
-        
+
     </script>
 </body>
 </html>
