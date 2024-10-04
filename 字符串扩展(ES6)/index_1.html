@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //unicode字符
+        console.log("\u{0061}"); // "a"
+        console.log("\u{0062}"); // "b"
+        console.log("\u{0063}"); // "c"
+        console.log("\u{0064}"); // "d"
+        //字符串遍历接口
+        for (let i in "hello"){//错误写法，应该使用for...of,这个打印的是索引
+            console.log(i); // 0 1 2 3 4
+        }
+        for (let i of "hello"){
+            console.log(i); // h e l l o
+        }
+//============================================================================================================
+        //字符串模板
+        var str = "hello world";
+        var name = "tom";
+        let url = `https://www.baidu.com/s?wd=${str}`;
+        console.log(`${str} ${name}`); // "hello world tom"
+        console.log(url); // "https://www.baidu.com/s?wd=hello%20world"
+
+        //没有模板字符串的情况下，字符串拼接
+        var href = "https://www.baidu.com/s?wd=hello%20world";
+        var result = "<a href='" + href + "'>" + name + "</a>";
+        console.log(result); // "<a href='https://www.baidu.com/s?wd=hello%20world'>tom</a>"
+
+//===============================================================================================
+
+        //字符串新增方法_详见index_2.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

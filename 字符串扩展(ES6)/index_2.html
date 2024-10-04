@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //字符串新增方法
+        //"" 和 '' 都可以
+        var str = 'hello world';
+        var ld = "ld"
+        console.log(str.includes(ld)); //true
+        console.log(str.startsWith(ld)); //false
+        console.log(str.endsWith(ld)); //true
+        //这三个方法都可以接收第二个参数，表示开始搜索的位置，默认为0
+        console.log(str.includes(ld, 2)); //true
+        console.log(str.startsWith(ld, 2)); //false
+        console.log(str.endsWith(ld, 2)); //false
+
+        // =============================================================
+
+        // repeat() 方法
+        //repeat() 方法用于将字符串重复 n 次，并返回新字符串。
+        var str = 'hello';
+        console.log(str.repeat(3)); //hellohellohello
+
+        // padStart() 方法
+        //padStart() 方法用于在字符串的开始处填充指定字符，直到该字符串达到指定长度。
+        var str = 'hello';
+        console.log(str.padStart(10)); //      hello(前面补充了10个空格)
+        console.log(str.padStart(10, '1234567890')); //1234567890hello
+
+        // padEnd() 方法
+        //padEnd() 方法用于在字符串的末尾处填充指定字符，直到该字符串达到指定长度。
+        var str = 'hello';
+        console.log(str.padEnd(10)); //hello     
+        console.log(str.padEnd(10, '1234567890')); //hello1234567890
+
+        // trim() 方法
+        //trim() 方法用于删除字符串两端的空白字符，并返回新字符串。
+        var str = '   hello   ';
+        console.log(str.trim()); //hello
+
+        // trimStart() 方法
+        //trimStart() 方法用于删除字符串开头的空白字符，并返回新字符串。
+        var str = '   hello   ';
+        console.log(str.trimStart()); //hello  
+
+        // trimEnd() 方法
+        //trimEnd() 方法用于删除字符串末尾的空白字符，并返回新字符串。
+        var str = '   hello   ';
+        console.log(str.trimEnd()); //   hello
+
+
+    </script>
+</body>
+</html>
