@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        // 传统方式_麻烦
+        var name = obj.name;
+        var age = obj.age;
+        var city = obj.city;
+        console.log(name); // John
+        console.log(age); // 30
+
+        // 解构赋值
+        var { name, age, city } = obj;
+        console.log(name); // John
+        console.log(age); // 30
+
+
+
+        // 应用场景
+
+    </script>
+</body>
+
+</html>

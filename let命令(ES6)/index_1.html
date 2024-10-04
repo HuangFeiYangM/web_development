@@ -7,7 +7,27 @@
 </head>
 <body>
     <script>
-        
+        var a = [];
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+            a[i] = function() {
+                console.log(i);
+            };
+            // i最后的值是10
+        }
+        console.log(a[5]());//输出10
+        //原因：函数赋值给了数组,但是这个循环使用的是var关键字，相当于var i = 0 --> var i = 1 --> var i = 2 --> var i = 10，最后i的值是10，所以函数内部的i也是10。
+
+        //以下是解决方案:
+        var b = [];
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+            b[i] = function() {
+                console.log(i);
+            };
+        }
+        console.log(b[5]());//输出5
+        //原因：let关键字声明的变量只在当前代码块有效，所以不会影响到循环外的i。
     </script>
 </body>
 </html>
