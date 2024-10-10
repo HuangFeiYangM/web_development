@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 使用iframe嵌入页中页 -->
+    <iframe src="#" frameborder="0" width="100%" height="500px">
+        <!-- 若浏览器不支持iframe，则显示如下内容 -->
+        <p>您的浏览器不支持iframe标签，请使用现代浏览器。</p>
+
+        <p>请使用Chrome、Firefox、Safari、IE9及以上版本的浏览器。</p>
+
+        <p>请关闭广告拦截插件。</p>
+
+        <p>请检查网络连接是否正常。</p>
+    </iframe>
+
+    <!-- 页中页 -->
+    <iframe src="Https://www.baidu.com" sandbox="allow-scripts allow-forms" frameborder="0" width="100%" height="500px">
+        <!-- 若浏览器不支持iframe，则显示如下内容 -->
+        <!-- frameborder表示边框，width表示宽度，height表示高度，sandbox表示安全设置，allow-scripts表示允许脚本，allow-forms表示允许表单提交 -->
+        <p>您的浏览器不支持iframe标签，请使用现代浏览器。</p>
+
+        <p>请使用Chrome、Firefox、Safari、IE9及以上版本的浏览器。</p>
+    </iframe>
+
+</body>
+
+</html>
