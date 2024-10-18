@@ -37,6 +37,14 @@ background-image: repeating-linear-gradient(to bottom, #f00, #0f0 50%, #00f 100%
 <!-- 50%表示重复的位置，100%表示结束的位置 -->
 ```
 
+**具体书本**:
+![1]()
+![1]()
+![1]()
+
+
+
+
 ### 用到的修饰符:
 - to bottom: 表示从上到下
 - to right: 表示从左到右
